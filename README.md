@@ -11,5 +11,6 @@ This is the [live preview](...)
 
 - I have to figure out how to create pop up models using javascript
 - How to make each block take the space available on the pad no matter how many they are (2 - 16 square)
+- How to readjust the x in the `grid-template: repeat(x, 1fr);` property to align the pixels in a grid fashion as user readjusts the pad size
 
 ## Development
