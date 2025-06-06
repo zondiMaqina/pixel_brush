@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  list-style: none;
 }
 
 section#sketch-pad{
@@ -17,3 +18,34 @@ section#sketch-pad{
 section#sketch-pad div{
   border: 1px solid;
 }
+
+li{
+  display: inline-block;
+}
+
+header nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 10px;
+}
+
+header nav ul{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav ul li img{
+  width: max(50px, 10vw);
+}
+
+
+nav ul.right li img{
+  width: clamp(25px, max(25px, 5vw), 40px);
+}
+
+ul li p{
+  font-size: calc(15px + 2vw);
+}
+
