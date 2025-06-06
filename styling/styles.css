@@ -8,6 +8,26 @@
   list-style: none;
 }
 
+:root{
+  --dark: #0D1B2A;
+  --medium: #1B263B;
+  --light: #415A77;
+  --font: #EDE1Dd;
+}
+
+body{
+  min-height: 100vh;
+  background: var(--light);
+}
+
+header{
+  background: var(--dark);
+}
+
+p, label{
+  color: var(--font)
+}
+
 main{
   padding: 10px;
 }
@@ -17,8 +37,8 @@ section#sketch-pad{
   aspect-ratio: 1 / 1;
   border: 1px solid;
   display: grid;
-  background-color: yellow;
   margin: 10px auto;
+  background: var(--font);
 }
 
 section#sketch-pad div{
@@ -33,26 +53,26 @@ header nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 5px 10px;
+  padding: 5px 10px;
 }
 
 header nav ul{
   display: flex;
-  gap: 10px;
+  gap: 30px;
   align-items: center;
 }
 
 nav ul li img{
-  width: max(50px, 10vw);
+  width: max(40px, 6vw);
 }
 
 
 nav ul.right li img{
-  width: clamp(25px, max(25px, 5vw), 40px);
+  width: clamp(20px, max(20px, 5vw), 30px);
 }
 
 ul li p{
-  font-size: calc(15px + 2vw);
+  font-size: calc(10px + 2vw);
 }
 
 article.features-pane{
@@ -61,23 +81,25 @@ article.features-pane{
   align-items: center;
   width: fit-content;
   padding: 10px;
-  margin: 10px auto;
+  margin: 25px auto;
   border: 1px solid;
-  width: min(80%, 400px);
+  width: min(90%, 400px);
   border-radius: 5px;
+  gap: 5px;
+  background: var(--medium);
 }
 
 article.features-pane ul li img, section label img{
-  width: max(35px, 5vw);
-}
-
-article.features-pane ul, article.features-pane section{
-  
+  width: max(30px, 4vw);
 }
 
 
 article.features-pane ul, article.features-pane section, label{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+}
+
+section#colors-choice{
+  flex-flow: wrap;
 }
