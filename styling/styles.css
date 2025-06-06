@@ -146,3 +146,21 @@ article.features-pane ul, article.features-pane section, label{
 section#colors-choice{
   flex-flow: wrap;
 }
+
+article.light, article.light section label{
+  background: var(--font);
+  color: var(--dark);
+}
+
+header.light{
+  background: var(--font);
+  color: var(--dark);
+}
+
+body.light{
+  background: lightblue;;
+}
+
+section.dark{
+  background: var(--dark);
+}
