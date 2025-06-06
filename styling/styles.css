@@ -22,6 +22,7 @@ body{
 
 header{
   background: var(--dark);
+  box-shadow: 0 2px 4px var(--dark);
 }
 
 p, label{
@@ -74,6 +75,14 @@ ul li p{
   font-size: calc(10px + 2vw);
 }
 
+div.settings-container{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
 header article#settings{
   width: 150px;
   font-size: 25px;
@@ -83,7 +92,7 @@ header article#settings{
   border-radius: 5px;
   border: 1px solid;
   background: var(--light);
-  display: none;
+  margin: 0 auto;
 }
 
 article#settings input{
@@ -116,12 +125,12 @@ article.features-pane{
   border-radius: 5px;
   gap: 5px;
   background: var(--medium);
+  box-shadow: 0 2px 4px var(--dark);
 }
 
 article.features-pane ul li img, section label img{
   width: max(30px, 4vw);
 }
-
 
 article.features-pane ul, article.features-pane section, label{
   display: flex;
