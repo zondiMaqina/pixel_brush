@@ -66,13 +66,42 @@ nav ul li img{
   width: max(40px, 6vw);
 }
 
-
 nav ul.right li img{
   width: clamp(20px, max(20px, 5vw), 30px);
 }
 
 ul li p{
   font-size: calc(10px + 2vw);
+}
+
+header article#settings{
+  width: 150px;
+  font-size: 25px;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  background: var(--light);
+  display: none;
+}
+
+article#settings input{
+  width: 30px;
+  text-align: center;
+  flex-grow: 2;
+}
+
+article#settings p{
+  border: 1px solid grey;
+  flex-basis: 40px;
+  text-align: center;
+  border-radius: 5px;
+  background: var(--dark);
+}
+
+article#settings p:active{
+  background: var(--light);
 }
 
 article.features-pane{
