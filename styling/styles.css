@@ -8,11 +8,17 @@
   list-style: none;
 }
 
+main{
+  padding: 10px;
+}
+
 section#sketch-pad{
-  width: min(500px, 100%);
+  width: min(400px, 100%);
   aspect-ratio: 1 / 1;
   border: 1px solid;
   display: grid;
+  background-color: yellow;
+  margin: 10px auto;
 }
 
 section#sketch-pad div{
@@ -49,3 +55,29 @@ ul li p{
   font-size: calc(15px + 2vw);
 }
 
+article.features-pane{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid;
+  width: min(80%, 400px);
+  border-radius: 5px;
+}
+
+article.features-pane ul li img, section label img{
+  width: max(35px, 5vw);
+}
+
+article.features-pane ul, article.features-pane section{
+  
+}
+
+
+article.features-pane ul, article.features-pane section, label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
