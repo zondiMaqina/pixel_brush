@@ -83,6 +83,11 @@ div.settings-container{
   display: none;
 }
 
+div.show{
+  display: initial;
+}
+
+
 header article#settings{
   width: 150px;
   font-size: 25px;
