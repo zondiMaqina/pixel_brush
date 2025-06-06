@@ -125,7 +125,6 @@ article.features-pane{
   width: fit-content;
   padding: 10px;
   margin: 25px auto;
-  border: 1px solid;
   width: min(90%, 400px);
   border-radius: 5px;
   gap: 5px;
@@ -148,19 +147,10 @@ section#colors-choice{
 }
 
 article.light, article.light section label{
-  background: var(--font);
-  color: var(--dark);
-}
-
-header.light{
-  background: var(--font);
+  background: whitesmoke;
   color: var(--dark);
 }
 
 body.light{
-  background: lightblue;;
-}
-
-section.dark{
-  background: var(--dark);
+  background: whitesmoke;;
 }
