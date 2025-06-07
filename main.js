@@ -7,21 +7,22 @@ const allColors = {
 };
 
 // for showing pop up model and removing it
-const settingsImage = document.querySelector("ul.right li img#settings-button");
+const icons = document.querySelector("header nav ul.right");
 const model = document.querySelector("header div.settings-container");
-
-settingsImage.addEventListener("click", () => {
-  model.classList.toggle("show");
-})
-
-// for changing theme of webpage
 const body = document.querySelector("body");
 const featuresPane = document.querySelector("article.features-pane");
-const sunIcon = document.querySelector("nav ul li img#theme-button");
 
-sunIcon.addEventListener("click", () => {
-  body.classList.toggle('light');
-  featuresPane.classList.toggle('light');
+icons.addEventListener("click", (event) => {
+  let target = event.target;
+  
+  if (target.id == 'settings-button'){
+    // for showing model
+    model.classList.toggle('show')
+  } else if (target.id == 'theme-button'){
+    // for changing page theme
+    body.classList.toggle('light');
+    featuresPane.classList.toggle('light');
+  };
 })
 
 // for incrementing and decrementing grid suqare
@@ -34,11 +35,11 @@ settingsModel.addEventListener('click', (event) => {
   let target = event.target;
   let value = Number(input.value);
   
-  if (target == increment){
-    if (value < 16) value += 1;
+  if (target == increment && value < 16){
+    value += 1;
     input.value = value;
-  } else if (target == decrement){
-    if (value > 2) value -= 1;
+  } else if (target == decrement && value > 2){
+    value -= 1;
     input.value = value;
   }
 });
