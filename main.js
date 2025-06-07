@@ -23,3 +23,22 @@ sunIcon.addEventListener("click", () => {
   body.classList.toggle('light');
   featuresPane.classList.toggle('light');
 })
+
+// for incrementing and decrementing grid suqare
+const settingsModel = document.querySelector("div.settings-container article#settings");
+const increment = document.querySelector("div.settings-container article p.increment");
+const decrement = document.querySelector("div.settings-container article p.decrement");
+const input = document.querySelector("div.settings-container article#settings input");
+
+settingsModel.addEventListener('click', (event) => {
+  let target = event.target;
+  let value = Number(input.value);
+  
+  if (target == increment){
+    if (value < 16) value += 1;
+    input.value = value;
+  } else if (target == decrement){
+    if (value > 2) value -= 1;
+    input.value = value;
+  }
+});
