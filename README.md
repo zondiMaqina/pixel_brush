@@ -17,5 +17,5 @@ This is the [live preview](...)
 ## Development
 
 - [x] pop up model created using css property `display: none` and added an eventlistener to the button that will show the pop up model
-- use the grid layout in css
-- instead of removing pop up modelby clicking anywhere else, the approacb of using `node.classList.toggle('x');` made it simple to remove or show the model by clicking on the appropriate element
+- [x] use the grid layout in css
+- [x] instead of removing pop up modelby clicking anywhere else, the approacb of using `node.classList.toggle('x');` made it simple to remove or show the model by clicking on the appropriate element
