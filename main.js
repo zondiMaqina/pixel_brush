@@ -55,3 +55,22 @@ settingsModel.addEventListener('click', (event) => {
     addBlocksToSketchPad(value)
   }
 });
+
+// for adding color to sketch pad
+function getRandomColor() {
+  let colors = [ "#FF6B6B", "#6BCB77", "#4D96FF", "#4D96FF", "#4D96FF", "#4D96FF", "#4D96FF",
+"#4D96FF", "#4D96FF", "#FFD93D"];
+
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  return colors[randomIndex];
+};
+
+sketchPad.addEventListener('touchmove', (e) => {
+  e.preventDefault(); // prevent scrolling
+  const touch = e.touches[0];
+  const element = document.elementFromPoint(touch.clientX, touch.clientY);
+
+  if (element && element.parentElement === sketchPad) {
+    element.style.backgroundColor = getRandomColor();
+  }
+}, { passive: false });
