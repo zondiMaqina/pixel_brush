@@ -19,3 +19,8 @@ This is the [live preview](...)
 - [x] pop up model created using css property `display: none` and added an eventlistener to the button that will show the pop up model
 - [x] use the grid layout in css
 - [x] instead of removing pop up modelby clicking anywhere else, the approacb of using `node.classList.toggle('x');` made it simple to remove or show the model by clicking on the appropriate element
+
+## Continued Development
+
+1. I still need to reduce thenumber of added event listeners, curently i added about 3 to 4, thanks to event delegation
+2. the custom colors drop list delays in setting the correct color to draw wit
