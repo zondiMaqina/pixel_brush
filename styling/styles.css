@@ -38,6 +38,7 @@ section#sketch-pad{
   aspect-ratio: 1 / 1;
   border: 1px solid;
   display: grid;
+  
   margin: 10px auto;
   background: var(--font);
 }
