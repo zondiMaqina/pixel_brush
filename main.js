@@ -1,10 +1,5 @@
-const allColors = {
-  blue: 'blue',
-  green: 'green',
-  red: 'red',
-  orange: 'orange',
-  yellow: 'yellow'
-};
+let background = "initial";
+let erasorOn = false;
 
 // for showing pop up model and removing it
 const icons = document.querySelector("header nav ul.right");
@@ -58,10 +53,12 @@ settingsModel.addEventListener('click', (event) => {
 
 // for adding color to sketch pad
 function getRandomColor() {
-  let colors = [ "#FF6B6B", "#6BCB77", "#4D96FF", "#4D96FF", "#4D96FF", "#4D96FF", "#4D96FF",
-"#4D96FF", "#4D96FF", "#FFD93D"];
+  let colors = [ "#FF6B6B", "#6BCB77", "#4D96FF", "#fd32A", "#4D96FF", "#CCD5AE", "#E63946",
+"#415A77", "#1B263B", "#FFD93D"];
 
   const randomIndex = Math.floor(Math.random() * colors.length);
+  if (background !== 'initial') return background;
+
   return colors[randomIndex];
 };
 
@@ -70,7 +67,31 @@ sketchPad.addEventListener('touchmove', (e) => {
   const touch = e.touches[0];
   const element = document.elementFromPoint(touch.clientX, touch.clientY);
 
-  if (element && element.parentElement === sketchPad) {
+  if (!erasorOn && element && element.parentElement === sketchPad) {
     element.style.backgroundColor = getRandomColor();
-  }
+  } else if (erasorOn && element.parentElement === sketchPad) {
+    element.style.backgroundColor = "var(--font)";
+  };
 }, { passive: false });
+
+// for clearing out colors and resetting pad
+let article = document.querySelector("main article.features-pane");
+const erasor = document.querySelector("article.features-pane ul#features li img.erasor");
+const reset = document.querySelector("article.features-pane ul#features li img.reset");
+const select = document.querySelector("article.features-pane select");
+
+article.addEventListener("click", (event)=> {
+  let element = event.target;
+  
+  if (element === erasor) {
+    erasor.classList.toggle('activated');
+    erasorOn = true;
+    if (erasor.classList.contains("activated") == false) erasorOn = false;
+  } else if (element === reset) {
+    document.querySelectorAll("section#sketch-pad div").forEach(function(node) {
+      node.style.backgroundColor = "var(--font)";
+    })
+  } else if (element === select) {
+    background = element.value;
+  }
+});
